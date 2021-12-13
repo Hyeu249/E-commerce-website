@@ -1,0 +1,58 @@
+.partThreeMain {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+/* background area */
+.backgroundArea {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  border: 1px solid #ccd0d5;
+}
+.backgroundArea_textTop {
+  font-size: 0.9375rem;
+  user-select: none;
+  color: #65676b;
+  margin: 18px 0 10px 16px;
+}
+.backgroundArea_circleFrame {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 5px 0 16px;
+  /* background-color: red; */
+}
+
+.backgroundArea_extendButton {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+.backgroundArea_extendButton:hover {
+  background-color: rgb(241, 241, 241);
+  cursor: pointer;
+}
+.backgroundArea_extendButton:active {
+  transform: scale(0.98);
+}
+/* id circle background */
+#circleOne:checked + label,
+#circleTwo:checked + label,
+#circleThree:checked + label,
+#circleFour:checked + label,
+#circleFive:checked + label,
+#circleSix:checked + label,
+#circleSeven:checked + label,
+#circleEight:checked + label,
+#circleNine:checked + label,
+#circleTen:checked + label,
+#circleEleven:checked + label,
+#circleTwelve:checked + label,
+#circleThirdTeen:checked + label,
+#circleFourTeen:checked + label,
+#circleFiftTeen:checked + label,
+#circleSixTeen:checked + label {
+  border: 3px solid #1877f2 !important;
+}

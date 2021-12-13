@@ -1,0 +1,36 @@
+/* ./my-app/src/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "sebino";
+    /* font-weight: "bold"; */
+    src: url("/src/fonts/Sebino-ExtraBold.ttf");
+  }
+}
+
+@layer components {
+  .border-b-3-green-30 {
+    @apply border-green-500 w-[30px] border-b-[3px];
+  }
+  .btn-blue {
+    @apply btn bg-blue-700 text-white border-0;
+  }
+}
+
+@layer utilities {
+  .shadown-3xl {
+    box-shadow: 1px 3px 8px #cecece;
+  }
+  .bg-root {
+    @apply bg-[#f2f3f5];
+  }
+  .shadown-nav {
+    box-shadow: 0 1px 3px 0 rgb(1 2 2 / 5%);
+  }
+  .border-r-1px {
+    border-right: 1px solid #e7e7e7;
+  }
+}
