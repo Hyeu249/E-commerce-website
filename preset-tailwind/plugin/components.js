@@ -4,6 +4,7 @@ module.exports = {
   plugins: [
     plugin(({ addComponents }) => {
       const button = {
+        // button
         ".btn": {
           color: "rgba(107, 114, 128)", //text-gray-500
           fontWeight: "bold", // font-bold
@@ -21,15 +22,55 @@ module.exports = {
             transform: "scale(0.95)",
           },
         },
+        ".active-70": {
+          cursor: "pointer",
+          userSelect: "none",
+          "&:active": {
+            transform: "scale(0.70)",
+          },
+        },
+        // pointer
         ".pointer": {
           cursor: "pointer",
           userSelect: "none",
         },
+        ".pointer-resizeX": {
+          cursor: "e-resize",
+          userSelect: "none",
+        },
+        ".pointer-resizeY": {
+          cursor: "n-resize",
+          userSelect: "none",
+        },
+        // position
         ".abs-r-max": {
           position: "absolute",
           top: 0,
           right: "100%",
         },
+        ".top": {
+          position: "absolute",
+          top: 0,
+        },
+        ".left-bot-0": {
+          left: 0,
+          bottom: 0,
+        },
+        // translate
+        ".translate-top-center": {
+          top: "50%",
+          transform: "translateY(-50%)",
+        },
+        //transition
+        ".off-screen": {
+          transform: "translateX(100%)",
+          transition: "transform 0.2s",
+        },
+        ".on-screen": {
+          transform: "none",
+          transition: "transform 0.2s",
+        },
+        // scrollBar
         ".scrollBar": {
           overflow: "auto",
           "&::-webkit-scrollbar": {
@@ -43,18 +84,6 @@ module.exports = {
             borderRadius: "5px",
             backgroundColor: "#adadad",
           },
-        },
-        ".translate-top-center": {
-          top: "50%",
-          transform: "translateY(-50%)",
-        },
-        ".top": {
-          position: "absolute",
-          top: 0,
-        },
-        ".left-bot-0": {
-          left: 0,
-          bottom: 0,
         },
 
         //end

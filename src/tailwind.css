@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply overflow-hidden;
+  }
   @font-face {
     font-family: "sebino";
     /* font-weight: "bold"; */
@@ -21,15 +24,51 @@
 }
 
 @layer utilities {
+  /* shadown */
   .shadown-3xl {
     box-shadow: 1px 3px 8px #cecece;
-  }
-  .bg-root {
-    @apply bg-[#f2f3f5];
   }
   .shadown-nav {
     box-shadow: 0 1px 3px 0 rgb(1 2 2 / 5%);
   }
+  /* background */
+  .bg-root {
+    @apply bg-[#f2f3f5];
+  }
+  /* height */
+  .height-\[100vh-80px\] {
+    height: calc(100vh - 80px);
+  }
+  .height-\[100vh-65px\] {
+    height: calc(100vh - 65px);
+  }
+  /* transform */
+  .rotate-\\[-90deg\\] {
+    transform: rotate(-90deg);
+  }
+  /* filter */
+  .filter-gray-100 {
+    filter: brightness(0.9) invert(0.8) sepia(0.1) hue-rotate(100deg)
+      saturate(200%);
+  }
+  .filter-gray-200 {
+    filter: brightness(0.9) invert(0.6) sepia(0.1) hue-rotate(100deg)
+      saturate(200%);
+  }
+  /* border */
+  .border-light {
+    border: 1px solid #e4e4e4;
+  }
+  .border-2-light {
+    border: 2px solid #e4e4e4;
+  }
+  .bd-t-1 {
+    border-top-width: 1px;
+  }
+  .bd-b-1-gray {
+    border-bottom: 1px solid #e4e4e4;
+  }
+
   .border-r-1px {
     border-right: 1px solid #e7e7e7;
   }

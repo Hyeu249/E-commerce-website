@@ -38,7 +38,7 @@ function WorkplaceTable() {
     >
       {!zoomTable && <Logo className="pl-6" />}
       <ItemsWorkplaceTable zoomTable={zoomTable} />
-      <div className="h-[53px] bg-transparent"></div>
+      {/* <div className="h-[53px] bg-transparent bg-red-500"></div> */}
       {<HelpWpTable isBan={isBan} zoomTable={zoomTable} />}
       <ZoomWpTable zoomTable={zoomTable} setZoomTable={setZoomTable} />
     </div>

@@ -23,10 +23,11 @@ function HelpWpTable({ zoomTable, isBan }) {
   return (
     <div
       ref={ref}
-      className={`fixed left-0 bottom-10 w-[300px] ${isBan} ${isZoom} pb-2 pl-4 bd-b-light ${titleHelpClass} font-medium bg-[#051e34]  transition-custom`}
+      // fixed left-0 bottom-10 w-[300px]
+      className={`${isBan} ${isZoom} pb-2 pl-4 bd-b-light ${titleHelpClass} font-medium bg-[#051e34]`}
     >
       Need help?
-      <div className={`ext-sm font-normal ${contentHelpClass}`}>
+      <div className={`text-sm font-normal ${contentHelpClass}`}>
         Open our help center
       </div>
     </div>

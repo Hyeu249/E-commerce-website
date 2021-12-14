@@ -5,7 +5,7 @@ import TitleCustomerStore from "./TitleCustomerStore";
 
 function HeaderDisplayWp() {
   return (
-    <div className="flex flex-shrink-0 h-[80px] bg-white dark:b-light shadown-nav">
+    <div className="flex flex-shrink-0 h-[65px] bg-white dark:b-light shadown-nav">
       <DarkMode />
       <TitleCustomerStore />
       <SearchBar />
