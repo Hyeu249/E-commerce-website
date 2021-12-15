@@ -613,6 +613,18 @@ body {
 .left-\[5px\] {
 	left: 5px;
 }
+.top-\[-7px\] {
+	top: -7px;
+}
+.left-\[-7px\] {
+	left: -7px;
+}
+.bottom-\[-6px\] {
+	bottom: -6px;
+}
+.right-\[-6px\] {
+	right: -6px;
+}
 .bottom-0 {
 	bottom: 0px;
 }
@@ -779,11 +791,26 @@ body {
 .h-\[10\%\] {
 	height: 10%;
 }
+.h-\[60\%\] {
+	height: 60%;
+}
 .h-\[3px\] {
 	height: 3px;
 }
 .h-\[100\%\] {
 	height: 100%;
+}
+.h-\[235px\] {
+	height: 235px;
+}
+.h-\[20px\] {
+	height: 20px;
+}
+.h-\[15px\] {
+	height: 15px;
+}
+.h-\[18px\] {
+	height: 18px;
 }
 .h-\[200px\] {
 	height: 200px;
@@ -878,6 +905,9 @@ body {
 .w-\[62vh\] {
 	width: 62vh;
 }
+.w-\[37\%\] {
+	width: 37%;
+}
 .w-\[24rem\] {
 	width: 24rem;
 }
@@ -886,6 +916,15 @@ body {
 }
 .w-\[3px\] {
 	width: 3px;
+}
+.w-\[20px\] {
+	width: 20px;
+}
+.w-\[15px\] {
+	width: 15px;
+}
+.w-\[18px\] {
+	width: 18px;
 }
 .w-4 {
 	width: 1rem;
@@ -985,6 +1024,13 @@ body {
 }
 .border-2 {
 	border-width: 2px;
+}
+.border-dashed {
+	border-style: dashed;
+}
+.\!border-white {
+	--tw-border-opacity: 1 !important;
+	border-color: rgba(255, 255, 255, var(--tw-border-opacity)) !important;
 }
 .border-blue-200 {
 	--tw-border-opacity: 1;
@@ -1106,13 +1152,9 @@ body {
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
 }
-.px-10 {
-	padding-left: 2.5rem;
-	padding-right: 2.5rem;
-}
-.px-8 {
-	padding-left: 2rem;
-	padding-right: 2rem;
+.px-14 {
+	padding-left: 3.5rem;
+	padding-right: 3.5rem;
 }
 .px-4 {
 	padding-left: 1rem;
@@ -1220,6 +1262,9 @@ body {
 .leading-3 {
 	line-height: .75rem;
 }
+.leading-\[29px\] {
+	line-height: 29px;
+}
 .text-yellow-300 {
 	--tw-text-opacity: 1;
 	color: rgba(252, 211, 77, var(--tw-text-opacity));
@@ -1270,6 +1315,10 @@ body {
 .grayscale {
 	--tw-grayscale: grayscale(100%);
 	filter: var(--tw-filter);
+}
+.border-1 {
+	border-width: 1px;
+	border-color: transparent;
 }
 .bd-light {
 	border: 1px solid #e7e7e7;
@@ -1325,6 +1374,9 @@ body {
 /* shadown */
 .shadown-3xl {
     box-shadow: 1px 3px 8px #cecece;
+  }
+.shadown-light {
+    box-shadow: 1px 2px 1px #8f8f8f;
   }
 .shadown-nav {
     box-shadow: 0 1px 3px 0 rgb(1 2 2 / 5%);

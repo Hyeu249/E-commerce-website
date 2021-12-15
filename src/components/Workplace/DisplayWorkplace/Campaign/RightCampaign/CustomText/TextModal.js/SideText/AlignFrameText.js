@@ -1,4 +1,4 @@
-function AlignFrameText({ id, img, className, checkedDf }) {
+function AlignFrameText({ id, img, className, defaul }) {
   return (
     <div className="relative">
       <label htmlFor={id}>
@@ -7,7 +7,7 @@ function AlignFrameText({ id, img, className, checkedDf }) {
           className="peer absolute invisible"
           type="radio"
           name="alignFrameText"
-          defaultChecked={checkedDf}
+          defaultChecked={defaul}
         />
         <img
           className={`peer-checked:bg-white peer-checked:filter-none ${className}`}

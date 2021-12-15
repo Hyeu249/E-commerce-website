@@ -15,6 +15,7 @@ function SideText() {
         id="centerY"
         className={imgClass}
         img={alignCenterCenterY}
+        defaul="true"
       />
       <AlignFrameText id="right" className={imgClass} img={alignRight} />
       <AlignFrameText id="centerTop" className={imgClass} img={alignTop} />

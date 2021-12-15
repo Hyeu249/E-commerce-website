@@ -1,6 +1,6 @@
 function DisplayViewText({ children }) {
   const displayNumberOfviewCl =
-    "w-[60px] h-[30px] border-light rounded-md text-center font-bold";
+    "w-[60px] h-[30px] leading-[29px] border-light rounded-md text-center font-bold";
   return (
     <div className="flex items-center">
       <div className={displayNumberOfviewCl}>20px</div>

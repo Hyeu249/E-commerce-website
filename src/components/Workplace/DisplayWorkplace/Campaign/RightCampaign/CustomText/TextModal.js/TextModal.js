@@ -1,4 +1,4 @@
-import CustomSizeText from "./CustomSizeText";
+import CustomSizeText from "./CustomSizeText/CustomSizeText";
 import FrontText from "./FrontText";
 import SideText from "./SideText/SideText";
 import FontText from "./FontText";
@@ -19,6 +19,7 @@ function TextModal({ isCustomText, setIsCustomText }) {
   return (
     <div className={`${frameCLass} scrollBar`}>
       <FrontText setIsCustomText={setIsCustomText} />
+
       {/* side */}
       <SideText />
       {/* size frame */}
