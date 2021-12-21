@@ -6,8 +6,8 @@ import HelpWpTable from "./HelpWpTable";
 import { useParams } from "react-router-dom";
 
 function WorkplaceTable() {
-  const { path } = useParams();
-
+  const params = useParams();
+  const camCreatePath = params["*"];
   //
   const [zoomTable, setZoomTable] = useState(false);
   const isBan = `${zoomTable === "ban" ? "ml-[-72px] w-[72px]" : ""}`;
@@ -15,22 +15,22 @@ function WorkplaceTable() {
 
   useEffect(() => {
     const width_window = window.innerWidth;
-    if (path === "campaign") setZoomTable(true);
-    if (width_window < 1100) setZoomTable(true);
-    if (width_window < 550) setZoomTable("ban");
+    if (camCreatePath === "edit") setZoomTable(true);
+    if (width_window < 1445) setZoomTable(true); //chỉnh thêm khóa zoomWpTable
+    if (width_window < 1080) setZoomTable("ban");
 
     const autoResize = () => {
-      if (window.innerWidth < 1100 && window.innerWidth > 550) {
+      if (window.innerWidth < 1445 && window.innerWidth > 1080) {
         return setZoomTable(true);
       }
-      if (window.innerWidth < 550) return setZoomTable("ban");
+      if (window.innerWidth < 1080) return setZoomTable("ban");
 
       setZoomTable(false);
     };
     window.addEventListener("resize", autoResize);
 
     return () => window.removeEventListener("resize", autoResize);
-  }, [path]);
+  }, [camCreatePath]);
 
   return (
     <div

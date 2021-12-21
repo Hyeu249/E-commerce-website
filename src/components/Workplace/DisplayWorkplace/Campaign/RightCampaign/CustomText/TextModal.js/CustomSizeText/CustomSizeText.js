@@ -1,24 +1,25 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import arrowUp from "../../../../../../../../img/arrowUp.png";
 import arrowDown from "../../../../../../../../img/arrowDown.png";
 import arrowLeft from "../../../../../../../../img/arrowLeft.png";
 import arrowRight from "../../../../../../../../img/arrowRight.png";
 import useCustomSizeText from "./useCustomSizeText";
+import { useDispatch } from "react-redux";
+import { mutateWidthTextHandle } from "../../../../../../../../store/global/globalSlice";
 
-function CustomSizeText({ className }) {
+function CustomSizeText({ textCustom, className }) {
+  const dispatch = useDispatch();
   const flexCenterXY = "flex items-center justify-around";
-  const [verticalFrame, setVerticalFrame] = useState([20, false]);
-  const [horizontalFrame, setHorizontalFrame] = useState([160, false]);
 
   const arrowUpRef = useRef();
   const mouseDownRef = useRef();
   const mouseLeftRef = useRef();
   const mouseRightRef = useRef();
 
-  useCustomSizeText([arrowUpRef, setVerticalFrame, "true"]);
-  useCustomSizeText([mouseDownRef, setVerticalFrame, "false"]);
-  useCustomSizeText([mouseLeftRef, setHorizontalFrame, "true"]);
-  useCustomSizeText([mouseRightRef, setHorizontalFrame, "false"]);
+  useCustomSizeText([arrowUpRef, textCustom, "height", "plus"]);
+  useCustomSizeText([mouseDownRef, textCustom, "height", "minus"]);
+  useCustomSizeText([mouseLeftRef, textCustom, "width", "plus"]);
+  useCustomSizeText([mouseRightRef, textCustom, "width", "minus"]);
 
   return (
     <div className={`flex ${className}`}>
@@ -30,7 +31,15 @@ function CustomSizeText({ className }) {
             className="w-3 filter-gray-100 active-70"
             src={arrowUp}
             alt="arrow up"
-            onClick={() => setVerticalFrame(state => [state[0] + 1, true])}
+            onClick={() =>
+              dispatch(
+                mutateWidthTextHandle({
+                  id: textCustom?.id,
+                  acreage: "height",
+                  operator: "plus",
+                })
+              )
+            }
           />
 
           <img
@@ -38,12 +47,18 @@ function CustomSizeText({ className }) {
             className="w-3 filter-gray-100 active-70"
             src={arrowDown}
             alt="arrow down"
-            onClick={() => setVerticalFrame(state => [state[0] - 1, true])}
+            onClick={() =>
+              dispatch(
+                mutateWidthTextHandle({
+                  id: textCustom?.id,
+                  acreage: "height",
+                  operator: "minus",
+                })
+              )
+            }
           />
         </div>
-        <div className="font-bold">
-          {verticalFrame[0] ? verticalFrame[0] : 20}
-        </div>
+        <div className="font-bold">{textCustom?.height}</div>
         <div className="text-gray-300">px</div>
       </div>
       {/* right */}
@@ -54,20 +69,33 @@ function CustomSizeText({ className }) {
             className="w-3 filter-gray-100 active-70"
             src={arrowLeft}
             alt="arrow left"
-            onClick={() => setHorizontalFrame(state => [state[0] + 1, true])}
+            onClick={() =>
+              dispatch(
+                mutateWidthTextHandle({
+                  id: textCustom?.id,
+                  acreage: "width",
+                  operator: "plus",
+                })
+              )
+            }
           />
           <img
             ref={mouseRightRef}
             className="w-3 filter-gray-100 active-70"
             src={arrowRight}
             alt="arrow right"
-            onClick={() => setHorizontalFrame(state => [state[0] - 1, true])}
+            onClick={() =>
+              dispatch(
+                mutateWidthTextHandle({
+                  id: textCustom?.id,
+                  acreage: "width",
+                  operator: "minus",
+                })
+              )
+            }
           />
         </div>
-        <div className="font-bold">
-          {" "}
-          {horizontalFrame[0] ? horizontalFrame[0] : 20}
-        </div>
+        <div className="font-bold">{textCustom?.width}</div>
         <div className="text-gray-300">px</div>
       </div>
     </div>

@@ -9,9 +9,11 @@ module.exports = {
       screens: {
         "w-185": "185px",
         "w-850": "850px",
+        "w-1080": "1080px",
       },
       fontFamily: {
         sebino: "sebino",
+        cavorting: "cavorting",
       },
     },
   },

@@ -1,6 +1,6 @@
 import { signInWithPopup, auth, provider, signOut } from "../../../firebase";
 import { useDispatch } from "react-redux";
-import { loginHandle } from "../../../store/credentials/credentialsSlice";
+import { loginHandle } from "../../../store/global/globalSlice";
 import { LogOutIcon, DashboardIcon } from "../../../Icon/Icon";
 import { useNavigate } from "react-router-dom";
 
@@ -16,7 +16,7 @@ function Login({ user }) {
         <div
           className="btn active"
           onClick={() => {
-            signInWithPopup(auth, provider).catch((err) => {
+            signInWithPopup(auth, provider).catch(err => {
               alert(err.message);
             });
           }}

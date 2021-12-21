@@ -1,16 +1,17 @@
-function AlignFrameText({ id, img, className, defaul }) {
+function AlignFrameText({ id, img, className, defaultChecked, onMouseDown }) {
   return (
-    <div className="relative">
+    <div className="relative" onMouseDown={onMouseDown}>
       <label htmlFor={id}>
         <input
           id={id}
           className="peer absolute invisible"
           type="radio"
           name="alignFrameText"
-          defaultChecked={defaul}
+          defaultChecked={defaultChecked}
         />
         <img
-          className={`peer-checked:bg-white peer-checked:filter-none ${className}`}
+          className={` ${className}`}
+          // className={`peer-checked:bg-white peer-checked:filter-none ${className}`}
           src={img}
           alt="align text"
         />

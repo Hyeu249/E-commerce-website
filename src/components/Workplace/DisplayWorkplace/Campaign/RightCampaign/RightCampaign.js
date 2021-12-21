@@ -1,16 +1,22 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import CustomText from "./CustomText/CustomText";
 import NextButton from "./NextButton/NextButton";
 import PartThree from "./PartThree/PartThree";
 import Price from "./Price/Price";
+import { useSelector } from "react-redux";
 
 function RightCampaign() {
-  const [isCustomText, setIsCustomText] = useState(false);
+  const textTocustom = useSelector(state => state.customTextOnShirt);
+  const thisTextToCustom = textTocustom.filter(
+    state => state.focus === true
+  )[0];
+
   const [lessThan185H, setLessThan185H] = useState(false);
-  const [price, setPrice] = useState("");
   const borderTopClass = "bd-t-1";
   const isHidden = `${lessThan185H ? "hidden" : ""}`;
-  const isMarginRight = `${isCustomText ? "off-screen" : "on-screen"}`;
+  const isMarginRight = `${
+    thisTextToCustom?.focus ? "off-screen" : "on-screen"
+  }`;
 
   useEffect(() => {
     const checkHeight = () => {
@@ -30,15 +36,12 @@ function RightCampaign() {
       className={`flex ${isHidden} ${isMarginRight} flex-col w-[24rem] pt-10 bg-white scrollBar overflow-x-hidden ${borderTopClass}`}
     >
       <PartThree />
-      <CustomText
-        isCustomText={isCustomText}
-        setIsCustomText={setIsCustomText}
-      />
-      <Price price={price} setPrice={setPrice} />
+      <CustomText thisTextToCustom={thisTextToCustom} />
+      <Price />
       <div className="flex-1"></div>
       <NextButton />
     </div>
   );
 }
 
-export default RightCampaign;
+export default React.memo(RightCampaign);

@@ -1,7 +1,7 @@
 import BackgroundSquare from "./BackgroundSquare";
 import DisplayViewText from "./DisplayViewText";
 
-function AlignTextView({ cl1 }) {
+function AlignTextView({ textCustom }) {
   const centerClass = "flex items-center justify-center";
   const roundedBdClass = "rounded-lg bd-light";
   const roundedBd2CLass = "rounded-lg border-2 border-blue-200";
@@ -11,7 +11,7 @@ function AlignTextView({ cl1 }) {
   const square4Cl = `w-7 h-7 bg-white !rounded-md ${roundedBd2CLass}`;
   return (
     <div className={square1Cl}>
-      <DisplayViewText>
+      <DisplayViewText textCustom={textCustom}>
         <div className={square2Cl}>
           <BackgroundSquare>
             <div className={square3Cl}>

@@ -4,14 +4,14 @@ import { onAuthStateChanged, auth } from "./firebase";
 import Home from "./components/Home/Home";
 import Workplace from "./components/Workplace/Workplace";
 import { useDispatch, useSelector } from "react-redux";
-import { loginHandle } from "./store/credentials/credentialsSlice";
+import { loginHandle } from "./store/global/globalSlice";
 
 function App() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
+  const user = useSelector(state => state.user);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, user => {
       if (user) {
         dispatch(
           loginHandle({
@@ -28,7 +28,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home user={user} />} />
-      <Route path="workplace/:path" element={<Workplace />} />
+      <Route path="workplace/:path/*" element={<Workplace />} />
     </Routes>
   );
 }

@@ -14,6 +14,9 @@ module.exports = {
         ".bd-2-light": {
           border: "2px solid #e7e7e7",
         },
+        ".bd-dashed-2": {
+          border: "2px dashed black",
+        },
         ".bd-warning": {
           border: "1px solid #ee2a28",
         },
@@ -40,6 +43,9 @@ module.exports = {
         // },
         ".bd-b-light\\+": {
           borderBottom: "1px solid #c7c7c7",
+        },
+        ".bd-b-light\\+\\+": {
+          borderBottom: "1px solid #e3e3e3",
         },
         ".bd-l-light\\+": {
           borderLeft: "1px solid #c7c7c7",
@@ -94,6 +100,10 @@ module.exports = {
         ".filter-gray": {
           filter:
             "brightness(0.9) invert(.8) sepia(.1) hue-rotate(100deg) saturate(200%)",
+        },
+        ".filter-gray-i4": {
+          filter:
+            "brightness(0.9) invert(.4) sepia(.1) hue-rotate(100deg) saturate(200%)",
         },
         ".filter-none": { filter: "none" },
       };

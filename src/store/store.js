@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import credentialsSlice from "./credentials/credentialsSlice.js";
+import global from "./global/globalSlice";
 
 const store = configureStore({
-  reducer: credentialsSlice,
+  reducer: global,
 });
 
 export default store;

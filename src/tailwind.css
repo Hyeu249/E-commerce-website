@@ -12,6 +12,31 @@
     /* font-weight: "bold"; */
     src: url("/src/fonts/Sebino-ExtraBold.ttf");
   }
+  @font-face {
+    font-family: "Cavorting";
+    src: url("/src/fonts/SVN-Cavorting.otf");
+  }
+  @font-face {
+    font-family: "Ruca";
+    src: url("/src/fonts/SVN-Ruca.otf");
+  }
+  @font-face {
+    font-family: "Antro";
+    src: url("/src/fonts/Antro_Vectra_Bolder.otf");
+  }
+  @font-face {
+    font-family: "SquidGame";
+    src: url("/src/fonts/Squid-Game.ttf");
+  }
+
+  @font-face {
+    font-family: "Respondent";
+    src: url("/src/fonts/RespondentBold.ttf");
+  }
+  @font-face {
+    font-family: "Matterdi";
+    src: url("/src/fonts/MatterdiBold.ttf");
+  }
 }
 
 @layer components {

@@ -1,31 +1,27 @@
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { mutateWidthTextHandle } from "../../../../../../../../store/global/globalSlice";
 
-function useCustomSizeText([ref, setState, operator]) {
+function useCustomSizeText([ref, { id } = "", acreage, operator]) {
+  const dispatch = useDispatch();
   useEffect(() => {
-    const mouseUpHandle = () => {
-      setState(state => [state[0], true]);
-      window.removeEventListener("mouseup", mouseUpHandle);
-    };
-    const arrowUp = ref.current;
-
+    const arrow = ref.current;
     const mouseDownHandle = () => {
       const interval = setInterval(() => {
-        setState(([number, isMouseUp]) => {
-          if (isMouseUp) {
-            clearInterval(interval);
-            return [number, false];
-          }
-          if (operator === "true") return [number + 1, false];
-          if (operator === "false") return [number - 1, false];
-        });
+        dispatch(mutateWidthTextHandle({ id, acreage, operator }));
       }, 150);
-      window.addEventListener("mouseup", mouseUpHandle);
+
+      const mouseUpHandle = () => {
+        clearInterval(interval);
+        arrow.removeEventListener("mouseup", mouseUpHandle);
+      };
+      arrow.addEventListener("mouseup", mouseUpHandle);
     };
-    arrowUp.addEventListener("mousedown", mouseDownHandle);
+    arrow.addEventListener("mousedown", mouseDownHandle);
     return () => {
-      arrowUp.removeEventListener("mousedown", mouseDownHandle);
+      arrow.removeEventListener("mousedown", mouseDownHandle);
     };
-  }, [operator, ref, setState]);
+  }, [operator, id, acreage, ref, dispatch]);
 
   return true;
 }

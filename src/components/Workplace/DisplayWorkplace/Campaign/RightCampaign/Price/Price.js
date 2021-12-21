@@ -1,68 +1,62 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { AccountIcon } from "../../../../.././../Icon/Icon";
-import OptionPrice from "./OptionPrice";
+import { useSelector } from "react-redux";
+import InputPrice from "./InputPrice";
+import FrameOptionPrice from "./FrameOptionPrice";
 
-function Price({ price, setPrice }) {
+function Price() {
+  const infoShirt = useSelector(state => state.infoShirt);
+  const uploadedPngs = useSelector(state => state.uploadedPngs);
+  const customTextOnShirt = useSelector(state => state.customTextOnShirt);
+  const isValidTshirt = uploadedPngs[0]?.img || customTextOnShirt[0]?.value;
+  const isValidPrice =
+    infoShirt.price === "60" ||
+    infoShirt.price === "250" ||
+    infoShirt.price === "550";
+
+  const isPriceUndefined = infoShirt.price === undefined;
+
+  //
+  const worth = infoShirt?.price;
   const [isFocus, setIsFocus] = useState(false);
-  const [worth, setWorth] = useState();
   const dadClass = "group relative flex justify-between";
-  const isHidden = `${isFocus ? "" : "hidden"}`;
-  const frameSelectClass = `${isHidden} absolute top-[100%] left-[0] w-[100%] pt-2`;
-  const selectClass = "rounded-2xl bg-white";
+
+  const isBgRedTextWhite = isValidTshirt ? "" : "bg-gray-500 text-white";
+  const isFillWhite = isValidTshirt ? "" : "fill-current";
+  const isRotate180 = isFocus ? `rotate-180` : "";
 
   return (
-    <div
-      tabIndex="0"
-      className={`${dadClass} leading-3+ bd-light rounded-2xl mx-4 mt-4 p-4 pointer`}
-      onMouseDown={() => setIsFocus(true)}
-      // onBlur={() => {
-      //   setIsFocus(false);
-      //   console.log("onBlur");
-      // }}
-    >
-      Giá bán: &nbsp;&nbsp;{worth ? worth + ".000 đồng" : ""}
-      <AccountIcon className="w-4" />
-      {worth === null && (
-        <input
-          value="input"
-          className="peer absolute top left-0 w-[100%] h-[100%] rounded-2xl pl-20 pb-1 bg-transparent"
-          type="text"
-          onChange={() => {}}
+    <Fragment>
+      <div
+        tabIndex="0"
+        className={`${dadClass} leading-3+ bd-light rounded-2xl mx-4 mt-4 p-4 pointer ${isBgRedTextWhite}`}
+        onMouseDown={() => {
+          (isPriceUndefined || isValidPrice) &&
+            isValidTshirt &&
+            setIsFocus(state => !state);
+        }}
+      >
+        Giá bán: &nbsp;&nbsp;{isValidPrice ? `${worth}.000 đồng` : ""}
+        {(isPriceUndefined || isValidPrice) && (
+          <AccountIcon className={`${isFillWhite} ${isRotate180} w-4`} />
+        )}
+        {!(isPriceUndefined || isValidPrice) && (
+          <InputPrice
+            uploadedPngs={uploadedPngs}
+            customTextOnShirt={customTextOnShirt}
+            infoShirt={infoShirt}
+          />
+        )}
+        <FrameOptionPrice
+          uploadedPngs={uploadedPngs}
+          customTextOnShirt={customTextOnShirt}
+          isFocus={isFocus}
         />
-      )}
-      <div className={`${frameSelectClass}`}>
-        <div className={`${selectClass} py-2 bd-light`}>
-          <OptionPrice
-            price="60.000 đồng"
-            onClick={() => {
-              setIsFocus(false);
-              setWorth(60);
-            }}
-          />
-          <OptionPrice
-            price="250.000 đồng"
-            onClick={() => {
-              setIsFocus(false);
-              setWorth(250);
-            }}
-          />
-          <OptionPrice
-            price="550.000 đồng"
-            onClick={() => {
-              setIsFocus(false);
-              setWorth(550);
-            }}
-          />
-          <OptionPrice
-            price="Đặt bằng tay"
-            onClick={() => {
-              setIsFocus(false);
-              setWorth(null);
-            }}
-          />
-        </div>
       </div>
-    </div>
+      {infoShirt.price && (
+        <div className={`pl-8 pt-4`}>Lãi: {infoShirt.price - 40}.000 đồng</div>
+      )}
+    </Fragment>
   );
 }
 

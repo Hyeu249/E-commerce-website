@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-import classes from "./PartThree.module.css";
 import { AccountIcon } from "../../../../../../Icon/Icon";
 import CircleBackgroundItem from "./CircleBackgroundItem/CircleBackgroundItem";
+import { v4 as uuidv4 } from "uuid";
 
 function PartThree({ setBackgroundText }) {
   //array circle background items
   const backgroundData = [
-    { id: classes.circleOne, color: "#071d49", defaultChecked: "true" },
-    { id: classes.circleTwo, color: "#fff" },
-    { id: classes.circleThree, color: "#0059a3" },
-    { id: classes.circleFour, color: "#004d41" },
-    { id: classes.circleFive, color: "#ee2a28" },
-    { id: classes.circleSix, color: "#cbd0d4" },
-    { id: classes.circleSeven, color: "#643335" },
-    { id: classes.circleEight, color: "#26262a" },
-    { id: classes.circleNine, color: "#008a43" },
-    { id: classes.circleTen, color: "#a0cced" },
-    { id: classes.circleEleven, color: "#5b6770" },
-    { id: classes.circleTwelve, color: "#ffe716" },
-    { id: classes.circleThirdTeen, color: "red" },
-    { id: classes.circleFourTeen, color: "green" },
-    { id: classes.circleFiftTeen, color: "blue" },
-    { id: classes.circleSixTeen, color: "orange" },
+    { id: uuidv4(), color: "#071d49", defaultChecked: "true" },
+    { id: uuidv4(), color: "#fff" },
+    { id: uuidv4(), color: "#0059a3" },
+    { id: uuidv4(), color: "#004d41" },
+    { id: uuidv4(), color: "#ee2a28" },
+    { id: uuidv4(), color: "#cbd0d4" },
+    { id: uuidv4(), color: "#643335" },
+    { id: uuidv4(), color: "#26262a" },
+    { id: uuidv4(), color: "#008a43" },
+    { id: uuidv4(), color: "#a0cced" },
+    { id: uuidv4(), color: "#5b6770" },
+    { id: uuidv4(), color: "#ffe716" },
+    { id: uuidv4(), color: "red" },
+    { id: uuidv4(), color: "green" },
+    { id: uuidv4(), color: "blue" },
+    { id: uuidv4(), color: "orange" },
   ];
 
   //state
@@ -33,8 +33,14 @@ function PartThree({ setBackgroundText }) {
       {/* background area */}
       <div className="flex flex-col rounded-2xl bd-light">
         {/* <div> */}
-        <div className={classes.backgroundArea_textTop}>Màu áo của bạn</div>
-        <div className={classes.backgroundArea_circleFrame}>
+        <div
+          className={`text-sm+ select-none text-[#65676b] mt-[18px] mb-[10px] ml-[16px]`}
+        >
+          Màu áo của bạn
+        </div>
+        <div
+          className={`relative flex justify-between flex-wrap mr-[5px] ml-[16px]`}
+        >
           {/* circle background items */}
           {backgroundData
             .splice(0, isExtendCircle ? 16 : 8)
@@ -43,14 +49,14 @@ function PartThree({ setBackgroundText }) {
                 key={id}
                 id={id}
                 color={color}
-                defaultChecked={defaultChecked}
+                checkedDf={defaultChecked}
                 setBackgroundText={setBackgroundText}
               />
             ))}
         </div>
         <div
-          className={classes.backgroundArea_extendButton}
-          onClick={() => setIsExtendCircle((state) => !state)}
+          className={`flex justify-center rounded-[10px] hover:bg-[#f1f1f1] pointer`}
+          onClick={() => setIsExtendCircle(state => !state)}
         >
           <AccountIcon
             style={{

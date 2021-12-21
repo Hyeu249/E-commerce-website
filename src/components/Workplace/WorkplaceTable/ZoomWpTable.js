@@ -5,7 +5,7 @@ function ZoomWpTable({ zoomTable, setZoomTable }) {
     <div
       className="group flex items-center h-[44px] ml-[-1rem] pointer"
       onClick={() => {
-        if (window.innerWidth > 1100) setZoomTable((state) => !state);
+        if (window.innerWidth > 1445) setZoomTable(state => !state);
       }}
     >
       <ArrowIcon
