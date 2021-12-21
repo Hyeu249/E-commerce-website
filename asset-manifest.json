@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/selling/static/css/main.d0595cd3.chunk.css",
-    "main.js": "/selling/static/js/main.f7305b35.chunk.js",
-    "main.js.map": "/selling/static/js/main.f7305b35.chunk.js.map",
+    "main.js": "/selling/static/js/main.2a106695.chunk.js",
+    "main.js.map": "/selling/static/js/main.2a106695.chunk.js.map",
     "runtime-main.js": "/selling/static/js/runtime-main.192b2328.js",
     "runtime-main.js.map": "/selling/static/js/runtime-main.192b2328.js.map",
-    "static/js/2.95c9f907.chunk.js": "/selling/static/js/2.95c9f907.chunk.js",
-    "static/js/2.95c9f907.chunk.js.map": "/selling/static/js/2.95c9f907.chunk.js.map",
+    "static/js/2.d9d79056.chunk.js": "/selling/static/js/2.d9d79056.chunk.js",
+    "static/js/2.d9d79056.chunk.js.map": "/selling/static/js/2.d9d79056.chunk.js.map",
     "index.html": "/selling/index.html",
     "static/css/main.d0595cd3.chunk.css.map": "/selling/static/css/main.d0595cd3.chunk.css.map",
-    "static/js/2.95c9f907.chunk.js.LICENSE.txt": "/selling/static/js/2.95c9f907.chunk.js.LICENSE.txt",
+    "static/js/2.d9d79056.chunk.js.LICENSE.txt": "/selling/static/js/2.d9d79056.chunk.js.LICENSE.txt",
     "static/media/index.css": "/selling/static/media/Squid-Game.49bbc6a6.ttf",
     "static/media/backShirt.da1e92ab.jpg": "/selling/static/media/backShirt.da1e92ab.jpg",
     "static/media/frontShirt.708aaba1.jpg": "/selling/static/media/frontShirt.708aaba1.jpg",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.192b2328.js",
-    "static/js/2.95c9f907.chunk.js",
+    "static/js/2.d9d79056.chunk.js",
     "static/css/main.d0595cd3.chunk.css",
-    "static/js/main.f7305b35.chunk.js"
+    "static/js/main.2a106695.chunk.js"
   ]
 }
