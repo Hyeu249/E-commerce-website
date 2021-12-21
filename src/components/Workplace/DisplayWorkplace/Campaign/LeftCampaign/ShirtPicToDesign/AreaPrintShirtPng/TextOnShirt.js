@@ -34,8 +34,7 @@ function TextOnShirt({ allowRangeRef, isPrecedence, setIsPrecedence, data }) {
           dispatch(changePropsTextHandle(textCustom));
         }}
         onBlur={() => {
-          textCustom.focus = true;
-          // textCustom.focus = !textCustom.focus;
+          textCustom.focus = !textCustom.focus;
           dispatch(changePropsTextHandle(textCustom));
         }}
         style={{
