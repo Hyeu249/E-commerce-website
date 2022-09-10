@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/selling/static/css/main.d0595cd3.chunk.css",
-    "main.js": "/selling/static/js/main.4c837990.chunk.js",
-    "main.js.map": "/selling/static/js/main.4c837990.chunk.js.map",
-    "runtime-main.js": "/selling/static/js/runtime-main.192b2328.js",
-    "runtime-main.js.map": "/selling/static/js/runtime-main.192b2328.js.map",
-    "static/js/2.d9d79056.chunk.js": "/selling/static/js/2.d9d79056.chunk.js",
-    "static/js/2.d9d79056.chunk.js.map": "/selling/static/js/2.d9d79056.chunk.js.map",
-    "index.html": "/selling/index.html",
-    "static/css/main.d0595cd3.chunk.css.map": "/selling/static/css/main.d0595cd3.chunk.css.map",
-    "static/js/2.d9d79056.chunk.js.LICENSE.txt": "/selling/static/js/2.d9d79056.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/selling/static/media/Squid-Game.49bbc6a6.ttf",
-    "static/media/backShirt.da1e92ab.jpg": "/selling/static/media/backShirt.da1e92ab.jpg",
-    "static/media/frontShirt.708aaba1.jpg": "/selling/static/media/frontShirt.708aaba1.jpg",
-    "static/media/pngwing.com.2639129f.png": "/selling/static/media/pngwing.com.2639129f.png"
+    "main.css": "/supa-hot-fire-you-must-check-that-out/static/css/main.fd8ba5e3.chunk.css",
+    "main.js": "/supa-hot-fire-you-must-check-that-out/static/js/main.e0637e1f.chunk.js",
+    "main.js.map": "/supa-hot-fire-you-must-check-that-out/static/js/main.e0637e1f.chunk.js.map",
+    "runtime-main.js": "/supa-hot-fire-you-must-check-that-out/static/js/runtime-main.d1428f71.js",
+    "runtime-main.js.map": "/supa-hot-fire-you-must-check-that-out/static/js/runtime-main.d1428f71.js.map",
+    "static/js/2.dacf1fc2.chunk.js": "/supa-hot-fire-you-must-check-that-out/static/js/2.dacf1fc2.chunk.js",
+    "static/js/2.dacf1fc2.chunk.js.map": "/supa-hot-fire-you-must-check-that-out/static/js/2.dacf1fc2.chunk.js.map",
+    "index.html": "/supa-hot-fire-you-must-check-that-out/index.html",
+    "static/css/main.fd8ba5e3.chunk.css.map": "/supa-hot-fire-you-must-check-that-out/static/css/main.fd8ba5e3.chunk.css.map",
+    "static/js/2.dacf1fc2.chunk.js.LICENSE.txt": "/supa-hot-fire-you-must-check-that-out/static/js/2.dacf1fc2.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/supa-hot-fire-you-must-check-that-out/static/media/Squid-Game.49bbc6a6.ttf",
+    "static/media/backShirt.da1e92ab.jpg": "/supa-hot-fire-you-must-check-that-out/static/media/backShirt.da1e92ab.jpg",
+    "static/media/frontShirt.708aaba1.jpg": "/supa-hot-fire-you-must-check-that-out/static/media/frontShirt.708aaba1.jpg",
+    "static/media/pngwing.com.2639129f.png": "/supa-hot-fire-you-must-check-that-out/static/media/pngwing.com.2639129f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.192b2328.js",
-    "static/js/2.d9d79056.chunk.js",
-    "static/css/main.d0595cd3.chunk.css",
-    "static/js/main.4c837990.chunk.js"
+    "static/js/runtime-main.d1428f71.js",
+    "static/js/2.dacf1fc2.chunk.js",
+    "static/css/main.fd8ba5e3.chunk.css",
+    "static/js/main.e0637e1f.chunk.js"
   ]
 }
