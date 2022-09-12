@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/supa-hot-fire-you-must-check-that-out/static/css/main.fd8ba5e3.chunk.css",
-    "main.js": "/supa-hot-fire-you-must-check-that-out/static/js/main.e0637e1f.chunk.js",
-    "main.js.map": "/supa-hot-fire-you-must-check-that-out/static/js/main.e0637e1f.chunk.js.map",
-    "runtime-main.js": "/supa-hot-fire-you-must-check-that-out/static/js/runtime-main.d1428f71.js",
-    "runtime-main.js.map": "/supa-hot-fire-you-must-check-that-out/static/js/runtime-main.d1428f71.js.map",
-    "static/js/2.dacf1fc2.chunk.js": "/supa-hot-fire-you-must-check-that-out/static/js/2.dacf1fc2.chunk.js",
-    "static/js/2.dacf1fc2.chunk.js.map": "/supa-hot-fire-you-must-check-that-out/static/js/2.dacf1fc2.chunk.js.map",
-    "index.html": "/supa-hot-fire-you-must-check-that-out/index.html",
-    "static/css/main.fd8ba5e3.chunk.css.map": "/supa-hot-fire-you-must-check-that-out/static/css/main.fd8ba5e3.chunk.css.map",
-    "static/js/2.dacf1fc2.chunk.js.LICENSE.txt": "/supa-hot-fire-you-must-check-that-out/static/js/2.dacf1fc2.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/supa-hot-fire-you-must-check-that-out/static/media/Squid-Game.49bbc6a6.ttf",
-    "static/media/backShirt.da1e92ab.jpg": "/supa-hot-fire-you-must-check-that-out/static/media/backShirt.da1e92ab.jpg",
-    "static/media/frontShirt.708aaba1.jpg": "/supa-hot-fire-you-must-check-that-out/static/media/frontShirt.708aaba1.jpg",
-    "static/media/pngwing.com.2639129f.png": "/supa-hot-fire-you-must-check-that-out/static/media/pngwing.com.2639129f.png"
+    "main.css": "/E-commerce-website/static/css/main.bac2b3cc.chunk.css",
+    "main.js": "/E-commerce-website/static/js/main.82876806.chunk.js",
+    "main.js.map": "/E-commerce-website/static/js/main.82876806.chunk.js.map",
+    "runtime-main.js": "/E-commerce-website/static/js/runtime-main.4f71a0fd.js",
+    "runtime-main.js.map": "/E-commerce-website/static/js/runtime-main.4f71a0fd.js.map",
+    "static/js/2.484e7e6e.chunk.js": "/E-commerce-website/static/js/2.484e7e6e.chunk.js",
+    "static/js/2.484e7e6e.chunk.js.map": "/E-commerce-website/static/js/2.484e7e6e.chunk.js.map",
+    "index.html": "/E-commerce-website/index.html",
+    "static/css/main.bac2b3cc.chunk.css.map": "/E-commerce-website/static/css/main.bac2b3cc.chunk.css.map",
+    "static/js/2.484e7e6e.chunk.js.LICENSE.txt": "/E-commerce-website/static/js/2.484e7e6e.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/E-commerce-website/static/media/Squid-Game.49bbc6a6.ttf",
+    "static/media/backShirt.da1e92ab.jpg": "/E-commerce-website/static/media/backShirt.da1e92ab.jpg",
+    "static/media/frontShirt.708aaba1.jpg": "/E-commerce-website/static/media/frontShirt.708aaba1.jpg",
+    "static/media/pngwing.com.2639129f.png": "/E-commerce-website/static/media/pngwing.com.2639129f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d1428f71.js",
-    "static/js/2.dacf1fc2.chunk.js",
-    "static/css/main.fd8ba5e3.chunk.css",
-    "static/js/main.e0637e1f.chunk.js"
+    "static/js/runtime-main.4f71a0fd.js",
+    "static/js/2.484e7e6e.chunk.js",
+    "static/css/main.bac2b3cc.chunk.css",
+    "static/js/main.82876806.chunk.js"
   ]
 }
